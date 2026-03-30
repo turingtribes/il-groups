@@ -130,7 +130,7 @@ export default function Home() {
           <div className="home-left">
             <p className="home-pill home-seq" style={{ "--delay": "0.05s" } as CSSProperties}>
               <span className="home-pill-dot" />
-              WELCOME TO I GROUPS
+              WELCOME TO IL GROUPS
             </p>
 
             <h1 className="home-main-title home-seq" style={{ "--delay": "0.12s" } as CSSProperties}>
@@ -142,7 +142,7 @@ export default function Home() {
             </h1>
 
             <p className="home-description home-seq" style={{ "--delay": "0.18s" } as CSSProperties}>
-              Welcome to I Groups Business Training Centre, a fast-growing training network
+              Welcome to IL Groups Business Training Centre, a fast-growing training network
               established in 2021, headquartered in Pudukkottai and expanding across Tamil Nadu.
             </p>
 
@@ -262,7 +262,7 @@ export default function Home() {
               Ready to Transform <span>Your Career</span>
             </h2>
             <p>
-              Join 500+ companies that trust I Groups to power their digital future.
+              Join 500+ companies that trust IL Groups to power their digital future.
             </p>
             <button type="button" className="home-outline-btn">
               Join Our Team

@@ -189,7 +189,7 @@ export default function Contact() {
               <div className="form-success">
                 <span className="success-icon">🎉</span>
                 <h4>Message Sent Successfully!</h4>
-                <p>Thank you for reaching out to I Groups. Our team will review your message and get back to you within 24 business hours.</p>
+                <p>Thank you for reaching out to IL Groups. Our team will review your message and get back to you within 24 business hours.</p>
               </div>
             ) : (
               <>
@@ -307,7 +307,7 @@ export default function Contact() {
             {/* YOUR EXISTING DESIGN OVERLAY (UNCHANGED)
   <div className="map-grid" />
   <div className="map-pin">📍</div>
-  <div className="map-label">I Groups Headquarters</div>
+  <div className="map-label">IL Groups Headquarters</div>
   <div className="map-sublabel">TVS Shanmuga Nagar, Pudukkottai – 622001</div> */}
           </div>
         </div>

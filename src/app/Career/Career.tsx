@@ -161,15 +161,15 @@ export default function Career() {
     <div className="career-page">
       <div className="page-hero">
         <div className="section-tag">Careers</div>
-        <h1 className="section-title">Grow with <span>I Groups</span></h1>
+        <h1 className="section-title">Grow with <span>IL Groups</span></h1>
         <p>Join a team of passionate innovators building the future of enterprise technology across India.</p>
       </div>
       <section className="career-culture">
         <div className="container">
           <div className="culture-text">
-            <div className="section-tag">Life at I Groups</div>
+            <div className="section-tag">Life at IL Groups</div>
             <h2 className="section-title">More Than a <span>Job</span></h2>
-            <p>At I Groups, we believe great work happens when people feel empowered, supported, and inspired. We've built a culture that blends high performance with genuine care for every team member.</p>
+            <p>At IL Groups, we believe great work happens when people feel empowered, supported, and inspired. We've built a culture that blends high performance with genuine care for every team member.</p>
             <p>From flexible work arrangements and continuous learning to fast career growth and a deeply collaborative environment — we invest in you as much as you invest in us.</p>
             <div className="culture-perks">
               {perks.map((p, i) => (
@@ -186,7 +186,7 @@ export default function Career() {
                 <span className="success-icon">🎉</span>
                 <h4>Application Submitted!</h4>
                 <p>
-                  Thanks for applying to <strong>I Groups</strong>. Our HR team will review your
+                  Thanks for applying to <strong>IL Groups</strong>. Our HR team will review your
                   application and reach out within 3–5 business days.
                 </p>
               </div>

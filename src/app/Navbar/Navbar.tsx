@@ -7,11 +7,11 @@ import "./Navbar.css";
 
 const navItems = [
   { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Internship", path: "/internship" },
-  { name: "Event", path: "/event" },
-  { name: "Career", path: "/career" },
-  { name: "Branches", path: "/branches" },
+  { name: "About", path: "/About" },
+  { name: "Internship", path: "/Internship" },
+  { name: "Event", path: "/Event" },
+  { name: "Career", path: "/Career" },
+  { name: "Branches", path: "/Branches" },
 ];
 
 export default function Navbar() {
@@ -22,10 +22,10 @@ export default function Navbar() {
     <>
       <nav className="navbar nav-show">
         <div className="navbar-container">
-          <div className="logo glow-text">
-            <span className="logo-i">I</span>
+          <Link href="/" className="logo glow-text">
+            <span className="logo-i">IL</span>
             <span className="logo-groups"> Groups</span>
-          </div>
+          </Link>
 
           <ul className="nav-links">
             {navItems.map((item) => (
@@ -41,7 +41,9 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <button className="contact-btn desktop-only">Contact Us</button>
+          <Link href="/Contact" className="contact-btn desktop-only">
+            Contact Us
+          </Link>
 
           <button
             type="button"
@@ -72,7 +74,7 @@ export default function Navbar() {
             </Link>
           ))}
 
-          <Link href="/contact" className="mobile-link" onClick={() => setMenuOpen(false)}>
+          <Link href="/Contact" className="mobile-link" onClick={() => setMenuOpen(false)}>
             Contact Us
           </Link>
         </div>

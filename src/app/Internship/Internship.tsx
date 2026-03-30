@@ -14,7 +14,7 @@ const perks = [
   {
     label: "Certificate",
     title: "Recognized Completion",
-    text: "Receive an industry-recognized completion certificate from I Groups after successful training progress.",
+    text: "Receive an industry-recognized completion certificate from IL Groups after successful training progress.",
   },
   {
     label: "Career Growth",
@@ -153,7 +153,7 @@ export default function Internship() {
       <section className="internship-cta">
         <div className="cta-panel">
           <div className="section-badge">NEXT STEP</div>
-          <h2>Start Building Your Career With I Groups</h2>
+          <h2>Start Building Your Career With IL Groups</h2>
           <p>
             Join a growth-focused internship environment where training, mentorship, and
             opportunity move together.

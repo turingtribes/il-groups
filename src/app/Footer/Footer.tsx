@@ -8,10 +8,10 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-left">
-          <h2 className="logo">
-            <span className="logo-i">I</span>
+          <Link href="/" className="logo">
+            <span className="logo-i">IL</span>
             <span className="logo-groups"> Groups</span>
-          </h2>
+          </Link>
 
           <p className="footer-desc">
             Empowering enterprises with innovative technology solutions, expert talent,
@@ -52,19 +52,22 @@ export default function Footer() {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/about">About Us</Link>
+              <Link href="/About">About Us</Link>
             </li>
             <li>
-              <Link href="/internship">Internship</Link>
+              <Link href="/Internship">Internship</Link>
             </li>
             <li>
-              <Link href="/events">Events</Link>
+              <Link href="/Event">Event</Link>
             </li>
             <li>
-              <Link href="/careers">Careers</Link>
+              <Link href="/Career">Career</Link>
             </li>
             <li>
-              <Link href="/branches">Branches</Link>
+              <Link href="/Branches">Branches</Link>
+            </li>
+            <li>
+              <Link href="/Contact">Contact</Link>
             </li>
           </ul>
         </div>
@@ -168,7 +171,7 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <p>
-          (c) 2026 <span>I Groups</span>. All rights reserved.
+          (c) 2026 <span>IL Groups</span>. All rights reserved.
         </p>
 
         <div className="footer-policies">
@@ -180,4 +183,3 @@ export default function Footer() {
     </footer>
   );
 }
-
