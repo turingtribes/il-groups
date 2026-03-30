@@ -95,6 +95,7 @@ export default function Branches() {
         </div>
 
         <div className="inline-block px-4 py-1 rounded-full bg-white/5 border border-white/10 text-xs tracking-widest uppercase text-cyan-400 mb-4">
+        <div className="bg-cyan-400 w-5 h-0.5"></div>
           Branches
         </div>
 
