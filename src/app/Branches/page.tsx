@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { MapPin } from "lucide-react";
 const building = <Image src="/building.png" height={100} width={100} alt="office"></Image>
@@ -95,7 +96,7 @@ export default function Branches() {
         </div>
 
         <div className="inline-block px-4 py-1 rounded-full bg-white/5 border border-white/10 text-xs tracking-widest uppercase text-cyan-400 mb-4">
-        <div className="bg-cyan-400 w-5 h-0.5"></div>
+        <div className="bg-cyan-400 h-0.5 w-5"></div>
           Branches
         </div>
 
