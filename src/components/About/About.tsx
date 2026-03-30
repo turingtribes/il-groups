@@ -156,6 +156,7 @@ export default function About() {
 
   return (
     <div className="about-root">
+  
       {/* Ambient background blobs */}
       <div className="ambient" aria-hidden="true">
         <div className="blob blob-1" />
