@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import "./About.css";
+import { useRouter } from "next/navigation";
 
 type TeamMember = {
   name: string;
@@ -134,6 +135,7 @@ export default function About() {
   const missionSection = useInView();
   const teamSection = useInView();
   const footerSection = useInView();
+  const router = useRouter(); // ✅ ADD THIS
 
   // Parallax on hero particles
   useEffect(() => {
@@ -208,7 +210,7 @@ export default function About() {
               <li key={item}><span className="check-icon">✦</span>{item}</li>
             ))}
           </ul>
-          <button className="cta-btn">
+          <button className="cta-btn"  onClick={() => router.push("/Career")}>
             <span>Work With Us</span>
             <span className="btn-arrow">→</span>
           </button>

@@ -2,12 +2,14 @@
 import Image from "next/image";
 import { MapPin, Users, Mail, Phone, ArrowRight, Building2, Globe } from "lucide-react";
 import "./page.css";
-
+import { useRouter } from "next/navigation";
 const buildingImg = "/building.png";
 const whatsappIcon = "/icons/whatsapp.svg";
 const emailIcon = "/icons/email.svg";
 
 export default function Branches() {
+    const router = useRouter(); // ✅ ADD HERE
+
   const branches = [
     {
       city: 'IL Groups', state: 'Tamil Nadu', hq: true,
@@ -202,9 +204,12 @@ export default function Branches() {
               </p>
               
               <div className="visit-ctas">
-                <button className="cta-primary">
-                  <ArrowRight size={18} /> Schedule a Visit
-                </button>
+              <button
+  className="cta-primary"
+  onClick={() => router.push("/Contact")}
+>
+  <ArrowRight size={18} /> Schedule a Visit
+</button>
                 <button className="cta-secondary">
                   <MapPin size={18} /> Get Directions
                 </button>

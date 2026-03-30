@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, useRef } from "react";
 import { CalendarDays, MapPin, Users, Search, Filter, ArrowRight, BellRing } from "lucide-react";
 import "./page.css";
 
@@ -23,7 +23,7 @@ const mockEvents: Event[] = [
     date: "2026-04-10",
     location: "Chennai, TN",
     seats: "50",
-    photo: "https://images.unsplash.com/photo-1628258334807-290b02735d3d?q=80&w=800&auto=format&fit=crop",
+    photo: "/events/flutter.png",
   },
   {
     id: "2",
@@ -33,7 +33,7 @@ const mockEvents: Event[] = [
     date: "2026-05-01",
     location: "Bangalore, KA",
     seats: "100",
-    photo: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop",
+    photo: "/events/ai.png",
   },
   {
     id: "3",
@@ -43,7 +43,7 @@ const mockEvents: Event[] = [
     date: "2026-06-15",
     location: "Hyderabad, TS",
     seats: "250",
-    photo: "https://images.unsplash.com/photo-1540575861501-7ad0582371f1?q=80&w=800&auto=format&fit=crop",
+    photo: "/events/conference.png",
   },
   {
     id: "4",
@@ -53,7 +53,7 @@ const mockEvents: Event[] = [
     date: "2026-04-22",
     location: "Online",
     seats: "500",
-    photo: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&auto=format&fit=crop",
+    photo: "/events/cloud.png",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function EventPage() {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [activeTab, setActiveTab] = useState("All");
-
+const eventsRef = useRef<HTMLElement | null>(null);
   const categories = ["All", "Workshop", "Hackathon", "Conference", "Webinar"];
 
   useEffect(() => {
@@ -106,9 +106,14 @@ export default function EventPage() {
           </p>
 
           <div className="hero-cta fade-up" style={{ animationDelay: '0.3s' }}>
-            <button className="cta-primary">
-              Browse Events <ArrowRight size={18} />
-            </button>
+           <button
+  className="cta-primary"
+  onClick={() =>
+    eventsRef.current?.scrollIntoView({ behavior: "smooth" })
+  }
+>
+  Browse Events <ArrowRight size={18} />
+</button>
             <button className="cta-secondary">
               <BellRing size={18} /> Get Notified
             </button>
@@ -144,8 +149,8 @@ export default function EventPage() {
       </section>
 
       {/* EVENTS GRID */}
-      <section className="events-section">
-        {loading ? (
+<section ref={eventsRef} className="events-section">
+          {loading ? (
           <div className="loader-container">
             <div className="loader" />
           </div>
@@ -214,4 +219,4 @@ export default function EventPage() {
       </section>
     </div>
   );
-}
+}

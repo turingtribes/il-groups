@@ -1,4 +1,8 @@
+"use client";
+
 import "./Internship.css";
+import { useRouter } from "next/navigation";
+import { useRef } from "react";
 
 const perks = [
   {
@@ -72,6 +76,8 @@ const trainingPath = [
 ];
 
 export default function Internship() {
+    const router = useRouter(); // ✅ ADD THIS
+const trainingRef = useRef<HTMLElement | null>(null); // ✅ ADD
   return (
     <div className="internship-shell">
       <section className="internship-hero">
@@ -89,8 +95,20 @@ export default function Internship() {
           professionals ready to build a stronger future.
         </p>
         <div className="hero-actions">
-          <button className="primary-btn">Apply Now</button>
-          <button className="secondary-btn">Explore Path</button>
+<button
+  className="primary-btn"
+  onClick={() => router.push("/Career")}
+>
+  Apply Now
+</button>
+          <button
+  className="secondary-btn"
+  onClick={() =>
+    trainingRef.current?.scrollIntoView({ behavior: "smooth" })
+  }
+>
+  Explore Path
+</button>
         </div>
       </section>
 
@@ -113,7 +131,7 @@ export default function Internship() {
         </div>
       </section>
 
-      <section className="training-section">
+      <section ref={trainingRef} className="training-section">
         <div className="section-heading training-heading">
           <div className="section-badge">TRAINING PATH</div>
           <h2>
@@ -158,7 +176,12 @@ export default function Internship() {
             Join a growth-focused internship environment where training, mentorship, and
             opportunity move together.
           </p>
-          <button className="primary-btn">Apply for Internship</button>
+<button
+  className="primary-btn"
+  onClick={() => router.push("/Career")}
+>
+  Apply for Internship
+</button>
         </div>
       </section>
     </div>

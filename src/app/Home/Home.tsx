@@ -14,6 +14,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import "./Home.css";
+import { useRouter } from "next/navigation";
 
 type Metric = {
   label: string;
@@ -33,6 +34,7 @@ const stats = [
   { value: "98%", label: "Client Satisfaction" },
   { value: "12+", label: "Years Experience" },
 ];
+
 
 const metrics: Metric[] = [
   { label: "Revenue Growth", value: "+84%", fill: "84%" },
@@ -86,6 +88,7 @@ export default function Home() {
   const [ctaVisible, setCtaVisible] = useState(false);
   const featuresRef = useRef<HTMLElement | null>(null);
   const ctaRef = useRef<HTMLElement | null>(null);
+const router = useRouter();
 
   useEffect(() => {
     const timer = window.setTimeout(() => setHeroVisible(true), 120);
@@ -153,7 +156,7 @@ export default function Home() {
             </p>
 
             <div className="home-action-row home-seq" style={{ "--delay": "0.3s" } as CSSProperties}>
-              <a href="/internship" className="home-apply-btn">
+              <a href="/Internship" className="home-apply-btn">
                 Apply now
               </a>
             </div>
@@ -264,9 +267,13 @@ export default function Home() {
             <p>
               Join 500+ companies that trust IL Groups to power their digital future.
             </p>
-            <button type="button" className="home-outline-btn">
-              Join Our Team
-            </button>
+           <button
+  type="button"
+  className="home-outline-btn"
+  onClick={() => router.push("/Career")}
+>
+  Join Our Team
+</button>
           </div>
         </section>
       </div>
