@@ -1560,12 +1560,14 @@ ul {
    RESPONSIVE
 ══════════════════════════════════════════ */
 @media (max-width: 1100px) {
+  
   :root {
     --section-pad: 80px 48px;
   }
 
   .team-grid {
     grid-template-columns: repeat(3, 1fr);
+    
   }
 }
 

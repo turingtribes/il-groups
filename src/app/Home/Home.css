@@ -178,13 +178,17 @@
 .home-right {
   position: relative;
   padding-top: 46px;
+  padding-bottom: 46px;
 }
 
 .home-dashboard-card {
   background: linear-gradient(175deg, rgba(9, 24, 58, 0.88), rgba(6, 18, 44, 0.88));
   border: 1px solid rgba(39, 213, 247, 0.2);
   border-radius: 18px;
-  padding: 18px;
+  padding-bottom: 38px;
+  padding-top: 18px;
+  padding-left: 18px;
+  padding-right: 18px;
   box-shadow: 0 26px 44px rgba(1, 8, 22, 0.56);
   backdrop-filter: blur(10px);
   animation: homeCardFloat 5.8s ease-in-out infinite;
@@ -306,6 +310,7 @@
   background: linear-gradient(145deg, rgba(43, 136, 255, 0.78), rgba(124, 84, 255, 0.72));
   color: #dbf6ff;
   grid-row: 1 / span 2;
+  
 }
 
 .home-floating-top {
@@ -709,6 +714,7 @@
   .home-floating-badge {
     position: static;
     margin-top: 10px;
+     
   }
 
   .home-right {
